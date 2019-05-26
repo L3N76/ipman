@@ -34,14 +34,12 @@ EOF
 
 die() {
     # Raises an error message and exits.
-    # param: $1: error message
+    # param: $1: $error_message: error message
 
     local exit_code=1
     local error_message="$1"
 
-    {
-        echo "${0##*/}: ${error_message}"
-    } 1>&2
+    echo "${0##*/}: ${error_message}" 1>&2
 
     exit "${exit_code}"
 }
@@ -51,7 +49,7 @@ root_check() {
     # if not raises an error message and dies.
 
     [[ "$EUID" -ne 0 ]] &&
-        die 'you cannot perform this operation unless you are root'
+        die 'You cannot perform this operation unless you are root.'
 }
 
 battery_protection_show() {
