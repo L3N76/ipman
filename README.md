@@ -38,3 +38,6 @@ Run: `ipman [operation]`
 | `-d`, `--disable`  |  Disable battery protection (charge level 100%).         |
 
 
+## License
+
+This simple wrapper script, with a definitely too big name, is licensed under the Unlicense - see the [LICENSE](LICENSE) file for details.
