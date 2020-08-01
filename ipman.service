@@ -1,0 +1,13 @@
+[Unit]
+Description=Enable Lenovo Ideapad battery protection
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ipman -e
+ExecStop=/usr/bin/ipman -d
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
